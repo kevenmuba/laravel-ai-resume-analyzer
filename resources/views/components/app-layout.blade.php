@@ -20,9 +20,9 @@
         ::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col">
+<body class="bg-slate-950 text-slate-50 antialiased min-h-screen flex flex-col">
     <!-- Main Container -->
-    <div x-data="resumeApp()" class="flex-grow flex flex-col max-w-md mx-auto w-full bg-white h-full min-h-screen shadow-2xl overflow-hidden relative">
+    <div class="flex-grow flex flex-col w-full min-h-screen relative">
         {{ $slot }}
     </div>
 
