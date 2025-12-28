@@ -17,11 +17,13 @@
                     <span class="text-xl font-bold tracking-tight">ResumeAI</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-400">
-                    <a href="#" class="hover:text-cyan-400 transition">Features</a>
-                    <a href="#" class="hover:text-cyan-400 transition">How it Works</a>
-                    <a href="#" class="hover:text-cyan-400 transition">About</a>
+                    <a href="#features" class="hover:text-cyan-400 transition">Features</a>
+                    <a href="#how-it-works" class="hover:text-cyan-400 transition">How it Works</a>
+                    <a href="https://mubarek-beta.vercel.app/" class="hover:text-cyan-400 transition" target="_blank">Contact</a>
                 </div>
-                <button class="bg-slate-800 hover:bg-slate-700 text-cyan-400 px-5 py-2 rounded-full text-sm font-semibold transition border border-slate-700">
+                <button
+                 @click="document.getElementById('analysis').scrollIntoView({behavior: 'smooth'})"
+                 class="bg-slate-800 hover:bg-slate-700 text-cyan-400 px-5 py-2 rounded-full text-sm font-semibold transition border border-slate-700">
                     Start Free
                 </button>
             </nav>
@@ -44,11 +46,11 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                    <button @click="$document.getElementById('analysis').scrollIntoView({behavior: 'smooth'})" 
+                    <button @click="document.getElementById('analysis').scrollIntoView({behavior: 'smooth'})" 
                             class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-bold rounded-xl shadow-lg shadow-cyan-500/20 transform hover:scale-[1.02] transition">
                         Analyze My Resume →
                     </button>
-                    <button class="w-full sm:w-auto px-8 py-4 bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 font-bold rounded-xl transition">
+                    <button @click="document.getElementById('how-it-works').scrollIntoView({behavior: 'smooth'})" class="w-full sm:w-auto px-8 py-4 bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 font-bold rounded-xl transition">
                         See How It Works
                     </button>
                 </div>
@@ -73,7 +75,7 @@
     </section>
 
     <!-- d2: Features Section -->
-    <section class="py-24 bg-slate-900 border-t border-slate-800 relative">
+    <section id="features" class="py-24 bg-slate-900 border-t border-slate-800 relative">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -132,6 +134,63 @@
                     <p class="text-slate-400 leading-relaxed">Ensure your resume passes Applicant Tracking Systems with keyword optimization.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24 bg-slate-950 relative overflow-hidden text-center">
+        <!-- Background Elements -->
+        <div class="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">How It Works</span>
+                </h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Three simple steps to unlock your career potential</p>
+            </div>
+
+            <div class="relative grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                 <!-- Connecting Line (Desktop) -->
+                 <div class="hidden md:block absolute top-[3rem] left-[15%] right-[15%] h-0.5 bg-gradient-to-r from-orange-500/30 via-purple-500/30 to-emerald-500/30 -z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative flex flex-col items-center group z-10">
+                    <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-orange-400 to-red-500 rotate-45 flex items-center justify-center shadow-lg shadow-orange-500/20 mb-8 transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[50deg]">
+                         <div class="-rotate-45 flex flex-col items-center justify-center text-white">
+                             <span class="text-lg font-bold opacity-80 mb-0.5">01</span>
+                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                         </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Paste Resume</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Copy your existing resume content and paste it into our secure analyzer.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative flex flex-col items-center group z-10">
+                     <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-indigo-400 to-purple-500 rotate-45 flex items-center justify-center shadow-lg shadow-indigo-500/20 mb-8 transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[50deg]">
+                         <div class="-rotate-45 flex flex-col items-center justify-center text-white">
+                             <span class="text-lg font-bold opacity-80 mb-0.5">02</span>
+                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                         </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Add Details</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Input the job description you're targeting or list your key skills.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative flex flex-col items-center group z-10">
+                     <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-cyan-400 to-emerald-500 rotate-45 flex items-center justify-center shadow-lg shadow-cyan-500/20 mb-8 transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[50deg]">
+                         <div class="-rotate-45 flex flex-col items-center justify-center text-white">
+                             <span class="text-lg font-bold opacity-80 mb-0.5">03</span>
+                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                         </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Get Results</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Receive instant analysis, match score, and actionable optimization tips.</p>
+                </div>
+             </div>
         </div>
     </section>
 
@@ -305,15 +364,10 @@
                     </div>
                     <span class="font-bold text-white">ResumeAI</span>
                 </div>
-                <div class="flex space-x-8 text-sm text-slate-500">
-                    <a href="#" class="hover:text-cyan-400 transition">About</a>
-                    <a href="#" class="hover:text-cyan-400 transition">Privacy</a>
-                    <a href="#" class="hover:text-cyan-400 transition">Terms</a>
-                    <a href="#" class="hover:text-cyan-400 transition">Contact</a>
-                </div>
-                <div class="mt-4 md:mt-0 text-sm text-slate-600">
-                    &copy; 2024 ResumeAI. All rights reserved.
-                </div>
+                
+                <div x-data="{ year: new Date().getFullYear() }" class="mt-4 md:mt-0 text-sm text-slate-600">
+    &copy; <span x-text="year"></span> ResumeAI. All rights reserved.
+</div>
             </div>
         </div>
     </footer>
