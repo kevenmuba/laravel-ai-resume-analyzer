@@ -16,9 +16,11 @@
                 </div>
                 <span class="font-semibold text-gray-900">Resume Content</span>
             </div>
-            <button class="text-indigo-600 text-sm font-medium bg-indigo-50 px-3 py-1 rounded-full hover:bg-indigo-100 transition flex items-center">
-                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path></svg>
-                Upload PDF
+            <button
+               @click="pasteResume()"
+             class="text-gray-500 text-sm hover:text-gray-700 transition flex items-center bg-gray-200 px-2 py-1 rounded">
+                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                Paste
             </button>
         </div>
         <textarea x-model="resumeText" class="w-full h-32 bg-transparent border-none focus:ring-0 text-gray-600 placeholder-gray-400 text-sm resize-none" placeholder="Paste your resume text here, or upload a file using the button above..."></textarea>
@@ -35,7 +37,9 @@
                 </div>
                 <span class="font-semibold text-gray-900">Job Description</span>
             </div>
-            <button class="text-gray-500 text-sm hover:text-gray-700 transition flex items-center bg-gray-200 px-2 py-1 rounded">
+            <button
+               @click="pasteJobDescription()"
+             class="text-gray-500 text-sm hover:text-gray-700 transition flex items-center bg-gray-200 px-2 py-1 rounded">
                     <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
                 Paste
             </button>
