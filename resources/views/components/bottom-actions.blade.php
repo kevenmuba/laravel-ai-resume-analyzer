@@ -58,7 +58,7 @@
                 <!-- Stats -->
                 <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto pt-12 border-t border-slate-800 mt-12">
                     <div>
-                        <div class="text-3xl font-bold text-white mb-1">50K+</div>
+                        <div class="text-3xl font-bold text-white mb-1">1K+</div>
                         <div class="text-slate-500 text-sm">Resumes Analyzed</div>
                     </div>
                     <div>
