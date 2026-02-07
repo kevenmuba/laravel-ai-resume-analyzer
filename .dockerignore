@@ -1,0 +1,8 @@
+/node_modules
+/vendor
+/.git
+/.env
+/storage/logs
+npm-debug.log
+Dockerfile
+docker-compose.yml
